@@ -13,3 +13,6 @@ A React application to search for movie details
 
 #### Hosted Link
 https://movie-lookup-live.herokuapp.com/
+
+##### Video demo
+https://drive.google.com/file/d/12_JzHmlV5bVzd3NaOhAaCGglZ8ATomi_/view?usp=sharing
