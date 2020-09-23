@@ -1,6 +1,14 @@
 .movie-details-container {
-    grid-column: 4/13;
+    grid-column: 5/13;
     min-height: 90vh;
     max-height: auto;
-    background-color: yellow;
+
+    h1 {
+        font-family: sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+        font-family: sans-serif;
+    }
 }

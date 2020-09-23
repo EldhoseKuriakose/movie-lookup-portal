@@ -13,8 +13,7 @@ function App() {
     let search = e.target.value;
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=5cf5b984eb74ef29b0547f15ca455afd&query=${search}`)
       .then(response => response.json())
-      .then(data => setResults(data.results))
-      .then(console.log(results));
+      .then(data => setResults(data.results));
   }
 
   const handleDisplayDetails = (e) => {
@@ -22,14 +21,15 @@ function App() {
     let id = e.target.id;
     fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5cf5b984eb74ef29b0547f15ca455afd`)
       .then(response => response.json())
-      .then(data => setDetails(data));
+      .then(data => setDetails(data))
+      .then(console.log(details));
   }
 
   return (
     <div className="App">
       <Navbar handleChange={handleChange} />
       <MovieList movies={results} handleDisplayDetails={handleDisplayDetails} />
-      <MovieDetails movieDetails={details} />
+      {details ? <MovieDetails movieDetails={details} /> : ''}
     </div>
   );
 }
